@@ -3,8 +3,8 @@ export default function Home() {
     <div className=" h-lvh flex flex-col gap-4 items-center justify-center">
       <p>Hi there 👋</p>
       <p>
-        I'm{" "}
-        <a className="text-[#FF69B4]" href="https://github.com/gunnmgirl">
+        I'm
+        <a className="text-[#FF69B4] ml-1" href="https://github.com/gunnmgirl">
           Džana Karamustafić
         </a>
         , a passionate full-stack developer with a specialization in startup
