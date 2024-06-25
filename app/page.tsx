@@ -5,8 +5,8 @@ import { Twitter } from "./icons/Twitter";
 
 export default function Home() {
   return (
-    <div className="h-lvh flex flex-col justify-evenly">
-      <div className="w-full flex flex-col gap-4 items-center justify-center">
+    <div className="h-lvh flex flex-col justify-evenly p-4 md:p-0">
+      <div className="w-full flex flex-col gap-4 items-center justify-center text-center">
         <p>Hi there 👋</p>
         <p>
           I'm

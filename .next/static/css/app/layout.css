@@ -566,42 +566,23 @@ video {
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
-.mx-1 {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-}
-.mr-1 {
-  margin-right: 0.25rem;
-}
 .ml-1 {
   margin-left: 0.25rem;
 }
 .flex {
   display: flex;
 }
-.h-lvh {
-  height: 100lvh;
-}
-.h-4 {
-  height: 1rem;
-}
-.h-8 {
-  height: 2rem;
-}
 .h-10 {
   height: 2.5rem;
 }
-.w-full {
-  width: 100%;
-}
-.w-4 {
-  width: 1rem;
-}
-.w-8 {
-  width: 2rem;
+.h-lvh {
+  height: 100lvh;
 }
 .w-10 {
   width: 2.5rem;
+}
+.w-full {
+  width: 100%;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -615,31 +596,17 @@ video {
 .justify-center {
   justify-content: center;
 }
-.justify-between {
-  justify-content: space-between;
-}
 .justify-evenly {
   justify-content: space-evenly;
-}
-.gap-4 {
-  gap: 1rem;
 }
 .gap-2 {
   gap: 0.5rem;
 }
+.gap-4 {
+  gap: 1rem;
+}
 .rounded-sm {
   border-radius: 0.125rem;
-}
-.rounded-md {
-  border-radius: 0.375rem;
-}
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-.bg-\[\#191970\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(25 25 112 / var(--tw-bg-opacity));
 }
 .bg-\[\#2C003E\] {
   --tw-bg-opacity: 1;
@@ -652,28 +619,34 @@ video {
 .p-2 {
   padding: 0.5rem;
 }
-.text-\[\#4B0082\] {
-  --tw-text-opacity: 1;
-  color: rgb(75 0 130 / var(--tw-text-opacity));
+.p-4 {
+  padding: 1rem;
 }
-.text-\[\#FF1493\] {
-  --tw-text-opacity: 1;
-  color: rgb(255 20 147 / var(--tw-text-opacity));
+.text-center {
+  text-align: center;
 }
-.text-\[\#E6E6FA\] {
+.text-\[\#FF69B4\] {
   --tw-text-opacity: 1;
-  color: rgb(230 230 250 / var(--tw-text-opacity));
+  color: rgb(255 105 180 / var(--tw-text-opacity));
 }
 .text-\[\#FFC0CB\] {
   --tw-text-opacity: 1;
   color: rgb(255 192 203 / var(--tw-text-opacity));
 }
-.text-\[\#8A2BE2\] {
-  --tw-text-opacity: 1;
-  color: rgb(138 43 226 / var(--tw-text-opacity));
+@media (min-width: 640px) {
+
+  .sm\:p-4 {
+    padding: 1rem;
+  }
 }
-.text-\[\#FF69B4\] {
-  --tw-text-opacity: 1;
-  color: rgb(255 105 180 / var(--tw-text-opacity));
+@media (min-width: 768px) {
+
+  .md\:p-4 {
+    padding: 1rem;
+  }
+
+  .md\:p-0 {
+    padding: 0px;
+  }
 }
 
