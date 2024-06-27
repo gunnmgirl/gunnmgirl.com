@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="h-lvh flex flex-col justify-evenly p-4 md:p-0">
       <div className="flex flex-col-reverse items-center gap-6 sm:flex-row sm:px-[8%] md:px-[15%] lg:px-[25%]">
-        <div className="w-full flex flex-col gap-4 items-center justify-center text-center">
+        <div className="w-full flex flex-col gap-2 items-center justify-center text-center">
           <p>Hi there 👋</p>
           <p>
             I'm
@@ -31,7 +31,7 @@ export default function Home() {
           src={profilePic}
           width={320}
           height={320}
-          className="rounded-full"
+          className="rounded-full ring-2 hover:ring-4 ring-[#FFB6C1]"
           alt="Picture of the author"
         />
       </div>
