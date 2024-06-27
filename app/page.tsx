@@ -31,7 +31,7 @@ export default function Home() {
           src={profilePic}
           width={320}
           height={320}
-          className="rounded-full ring-2 hover:ring-4 ring-[#FFB6C1]"
+          className="rounded-full ring-2 hover:ring-4 ring-[#FFB6C1] transition-all duration-400"
           alt="Picture of the author"
         />
       </div>
