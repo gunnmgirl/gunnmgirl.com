@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <div className="h-lvh flex flex-col items-center justify-evenly p-4 md:p-0">
       <div>
-        <button className="bg-[#FF69B4] p-2 rounded-md text-[#FFFFFF] hover:bg-[#BA55D3] hover:scale-105 transition-all duration-300">
-          Projects
+        <button className="bg-gradient-to-l from-[#FF69B4] to-[#FF69B4]/60 hover:from-[#BA55D3] hover:to-[#BA55D3]/60 hover:scale-105 font-bold text-white p-2 rounded-md transition-all duration-300">
+          View Projects
         </button>
       </div>
       <div className="flex flex-col items-center gap-6 sm:px-[8%] md:px-[15%] lg:px-[25%]">
