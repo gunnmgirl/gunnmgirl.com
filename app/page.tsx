@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { animated } from "@react-spring/web";
 import { SocialMediaBox } from "./components/SocialMediaBox";
 import { Github } from "./icons/Github";
 import { Linkedin } from "./icons/Linkedin";
@@ -7,7 +8,12 @@ import profilePic from "./images/dzana.jpg";
 
 export default function Home() {
   return (
-    <div className="h-lvh flex flex-col justify-evenly p-4 md:p-0">
+    <div className="h-lvh flex flex-col items-center justify-evenly p-4 md:p-0">
+      <div>
+        <button className="bg-[#FF69B4] p-2 rounded-md text-[#FFFFFF] hover:bg-[#BA55D3] hover:scale-105 transition-all duration-300">
+          Projects
+        </button>
+      </div>
       <div className="flex flex-col items-center gap-6 sm:px-[8%] md:px-[15%] lg:px-[25%]">
         <Image
           src={profilePic}
