@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { animated } from "@react-spring/web";
 import { SocialMediaBox } from "./components/SocialMediaBox";
 import { Github } from "./icons/Github";
 import { Linkedin } from "./icons/Linkedin";
@@ -23,11 +22,16 @@ export default function Home() {
           alt="Picture of the author"
         />
         <div className="w-full flex flex-col gap-2 items-center justify-center text-center">
-          <p>Hi there 👋</p>
+          <p>
+            Hi there
+            <span className="ml-1 inline-block hover:rotate-[30deg] cursor-pointer transition-transform duration-300">
+              👋
+            </span>
+          </p>
           <p>
             I'm
             <a
-              className="text-[#FF69B4] ml-1"
+              className="text-[#FF69B4] ml-1 transition-colors duration-300 ease-in-out hover:text-[#BA55D3]"
               href="https://github.com/gunnmgirl"
             >
               Džana Karamustafić
