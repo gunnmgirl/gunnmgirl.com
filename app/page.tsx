@@ -4,17 +4,33 @@ import { Github } from "./icons/Github";
 import { Linkedin } from "./icons/Linkedin";
 import { Twitter } from "./icons/Twitter";
 import profilePic from "./images/dzana.jpg";
+import { ProjectBox } from "./components/ProjectBox";
+
+// const projects = [
+//   {
+//     href: "https://web3-transaction-list.vercel.app/",
+//     title: "Blockchain transaction list",
+//     description: `Browse Ethereum and Polygon transactions. \n
+//     Etherscan and PolygonScan are the leading blockchain explorers, search, APIs and analytics platform for Ethereum and Polygon, \n
+//     a decentralized smart contracts platforms.`,
+//     icon:
+//   },
+// ];
 
 export default function Home() {
   return (
     <div className="grid grid-cols-[1fr_2fr_1fr] gap-2 h-lvh">
-      <div></div>
+      <div>
+        {/* {projects.map((project) => (
+          <ProjectBox {{...project}}/>
+        ))} */}
+      </div>
       <div className="h-full flex flex-col items-center justify-evenly p-4 md:p-0">
-        <div>
+        {/* <div>
           <button className="bg-gradient-to-l from-[#FF69B4] to-[#FF69B4]/60 hover:from-[#BA55D3] hover:to-[#BA55D3]/60 hover:scale-105 font-bold text-white p-2 rounded-md transition-all duration-300">
             View Projects
           </button>
-        </div>
+        </div> */}
         <div className="flex flex-col items-center gap-6 sm:px-[8%] md:px-[15%] lg:px-[20%]">
           <Image
             src={profilePic}
