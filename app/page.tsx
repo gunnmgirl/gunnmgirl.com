@@ -3,27 +3,16 @@ import { SocialMediaBox } from "./components/SocialMediaBox";
 import { Github } from "./icons/Github";
 import { Linkedin } from "./icons/Linkedin";
 import { Twitter } from "./icons/Twitter";
-import profilePic from "./images/dzana.jpg";
-import { ProjectBox } from "./components/ProjectBox";
-
-// const projects = [
-//   {
-//     href: "https://web3-transaction-list.vercel.app/",
-//     title: "Blockchain transaction list",
-//     description: `Browse Ethereum and Polygon transactions. \n
-//     Etherscan and PolygonScan are the leading blockchain explorers, search, APIs and analytics platform for Ethereum and Polygon, \n
-//     a decentralized smart contracts platforms.`,
-//     icon:
-//   },
-// ];
+import profilePic from "./static/images/dzana.jpg";
+// import { ProjectBox } from "./components/ProjectBox";
 
 export default function Home() {
   return (
     <div className="grid grid-cols-[1fr_2fr_1fr] gap-2 h-lvh">
       <div>
-        {/* {projects.map((project) => (
-          <ProjectBox {{...project}}/>
-        ))} */}
+        {/* {projects.map((project) => {
+          return <ProjectBox {...project} />;
+        })} */}
       </div>
       <div className="h-full flex flex-col items-center justify-evenly p-4 md:p-0">
         {/* <div>
