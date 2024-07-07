@@ -1,3 +1,5 @@
+import web3TransactionList from "./images/web3-transaction-manager.png";
+
 export const projects = [
   {
     href: "https://web3-transaction-list.vercel.app/",
@@ -5,5 +7,6 @@ export const projects = [
     description: `Browse Ethereum and Polygon transactions. \n
       Etherscan and PolygonScan are the leading blockchain explorers, search, APIs and analytics platform for Ethereum and Polygon, \n
       a decentralized smart contracts platforms.`,
+    projectImage: web3TransactionList,
   },
 ];

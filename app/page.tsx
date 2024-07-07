@@ -5,6 +5,7 @@ import { Linkedin } from "./icons/Linkedin";
 import { Twitter } from "./icons/Twitter";
 import profilePic from "./static/images/dzana.jpg";
 // import { ProjectBox } from "./components/ProjectBox";
+// import { projects } from "./static/projects";
 
 export default function Home() {
   return (
