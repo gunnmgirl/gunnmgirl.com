@@ -1,22 +1,21 @@
 import Image from "next/image";
 import { SocialMediaBox } from "./components/SocialMediaBox";
+import { Projects } from "./components/Projects";
+import { projects } from "./static/projects";
+import profilePic from "./static/images/dzana.jpg";
 import { Github } from "./icons/Github";
 import { Linkedin } from "./icons/Linkedin";
 import { Twitter } from "./icons/Twitter";
-import profilePic from "./static/images/dzana.jpg";
-// import { ProjectBox } from "./components/ProjectBox";
-// import { projects } from "./static/projects";
 
 export default function Home() {
+  const projectsGridOne = projects.slice(0, 4);
+  const projectsGridTwo = projects.slice(4, projects.length);
+
   return (
     <div className="grid grid-cols-[1fr_2fr_1fr] gap-2 h-lvh">
-      <div>
-        {/* {projects.map((project) => {
-          return <ProjectBox {...project} />;
-        })} */}
-      </div>
+      <div>{/* <Projects projects={projectsGridOne} /> */}</div>
       <div className="h-full flex flex-col items-center justify-evenly p-4 md:p-0">
-        {/* <div>
+        {/* <divs>
           <button className="bg-gradient-to-l from-[#FF69B4] to-[#FF69B4]/60 hover:from-[#BA55D3] hover:to-[#BA55D3]/60 hover:scale-105 font-bold text-white p-2 rounded-md transition-all duration-300">
             View Projects
           </button>
@@ -65,6 +64,7 @@ export default function Home() {
           <SocialMediaBox icon={<Twitter />} href="https://x.com/gunnmgirl98" />
         </div>
       </div>
+      {/* <Projects projects={projectsGridOne} /> */}
       <div></div>
     </div>
   );

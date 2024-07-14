@@ -1,12 +1,6 @@
 "use client";
-import Image, { StaticImageData } from "next/image";
-
-type ProjectBoxProps = {
-  projectImage: StaticImageData;
-  href: string;
-  title: string;
-  description: string;
-};
+import Image from "next/image";
+import { ProjectBoxProps } from "../types";
 
 export const ProjectBox = (props: ProjectBoxProps) => {
   const { href, title, description, projectImage } = props;

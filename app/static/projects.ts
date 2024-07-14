@@ -5,6 +5,7 @@ import clustifyMapbox from "./images/clustify-mapbox.png";
 import gitstalk from "./images/gitstalk.png";
 import yearPercentage from "./images/year-percentage.png";
 import bearClone from "./images/bear-clone.png";
+import confessions from "./images/confessions.png";
 
 export const projects = [
   {
@@ -48,5 +49,11 @@ export const projects = [
     title: "Bear clone",
     description: `Bear is perfect for everything from quick notes to in-depth essays. Full in-line image support brings your writing to life.`,
     projectImage: bearClone,
+  },
+  {
+    href: "https://github.com/gunnmgirl/confessions-client",
+    title: "Confessions",
+    description: `Confessed faults are half-mended.`,
+    projectImage: confessions,
   },
 ];
