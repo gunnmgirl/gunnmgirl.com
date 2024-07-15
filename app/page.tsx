@@ -8,6 +8,7 @@ import { Github } from "./icons/Github";
 import { Linkedin } from "./icons/Linkedin";
 import { Twitter } from "./icons/Twitter";
 import { useState } from "react";
+import clsx from "clsx";
 
 export default function Home() {
   const projectsGridOne = projects.slice(0, 4);
@@ -21,7 +22,12 @@ export default function Home() {
   return (
     <div className="grid grid-cols-[1fr_2fr_1fr] gap-2 h-lvh">
       <div>{/* <Projects projects={projectsGridOne} /> */}</div>
-      <div className="h-full flex flex-col items-center justify-evenly p-4 md:p-0">
+      <div
+        className={clsx(
+          "h-full flex flex-col items-center justify-evenly p-4 md:p-0 transition-all duration-500",
+          view ? "mx-16" : "m-0"
+        )}
+      >
         {/* <div>
           <button
             onClick={handleView}
