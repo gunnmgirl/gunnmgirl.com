@@ -20,11 +20,11 @@ export default function Home() {
   };
 
   return (
-    <div className="grid grid-cols-[1fr_2fr_1fr] gap-2 h-lvh">
-      <div>{/* <Projects projects={projectsGridOne} /> */}</div>
+    <div className="grid grid-cols-[1fr_2fr_1fr] gap-2 h-lvh overflow-hidden">
+      <div>{/* {view && <Projects projects={projectsGridOne} />} */}</div>
       <div
         className={clsx(
-          "h-full flex flex-col items-center justify-evenly p-4 md:p-0 transition-all duration-500",
+          "h-screen flex flex-col items-center justify-evenly p-4 md:p-0 transition-all duration-500",
           view ? "mx-16" : "m-0"
         )}
       >
@@ -33,7 +33,7 @@ export default function Home() {
             onClick={handleView}
             className="bg-gradient-to-l from-[#FF69B4] to-[#FF69B4]/60 hover:from-[#BA55D3] hover:to-[#BA55D3]/60 hover:scale-105 font-bold text-white p-2 rounded-md transition-all duration-300"
           >
-            View Projects
+            {view ? "Hide Projects" : "View Projects"}
           </button>
         </div> */}
         <div className="flex flex-col items-center gap-6 sm:px-[8%] md:px-[15%] lg:px-[20%]">
@@ -80,8 +80,7 @@ export default function Home() {
           <SocialMediaBox icon={<Twitter />} href="https://x.com/gunnmgirl98" />
         </div>
       </div>
-      {/* <Projects projects={projectsGridOne} /> */}
-      <div></div>
+      <div>{/* {view && <Projects projects={projectsGridTwo} />} */}</div>
     </div>
   );
 }
