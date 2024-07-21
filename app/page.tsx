@@ -19,7 +19,7 @@ export default function Home() {
   };
 
   return (
-    <div className="grid grid-cols-[1fr_2fr_1fr] gap-2 h-lvh overflow-hidden">
+    <div className="grid grid-rows-[1fr_1fr_1fr] md:grid-cols-[1fr_2fr_1fr] gap-2 h-lvh overflow-hidden">
       <div>{view && <Projects projects={projectsGridOne} />}</div>
       <div className="h-screen flex flex-col items-center justify-evenly p-4 md:p-0 transition-all duration-7000">
         <div>

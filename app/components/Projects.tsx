@@ -24,7 +24,7 @@ export const Projects = ({
   };
 
   return (
-    <div className="overflow-y-hidden">
+    <div className="overflow-y-hidden hidden md:block">
       <motion.div
         className="flex flex-col gap-16 items-center"
         variants={containerVariants}
