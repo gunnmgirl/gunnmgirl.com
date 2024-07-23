@@ -1,6 +1,5 @@
 "use client";
-import { useChain, useSpring, useSpringRef, animated } from "@react-spring/web";
-import { projects } from "../static/projects";
+import { motion } from "framer-motion";
 import { ProjectBox } from "./ProjectBox";
 import { ProjectBoxProps } from "../types";
 
@@ -11,27 +10,30 @@ export const Projects = ({
   projects: ProjectBoxProps[];
   isOdd?: boolean;
 }) => {
-  const scrollRef = useSpringRef();
-  const scrollStyles = useSpring({
-    ref: scrollRef,
-    from: { transform: "translateY(-100%)" },
-    to: { transform: false ? "translateY(100%)" : "translateY(-100%)" },
-    config: { duration: 5000 },
-    loop: true,
-  });
-
-  useChain([scrollRef]);
+  const containerVariants = {
+    animate: {
+      y: isOdd ? ["-100%", "100%"] : ["100%", "-100%"],
+      transition: {
+        y: {
+          repeat: Infinity,
+          duration: 8,
+          ease: "linear",
+        },
+      },
+    },
+  };
 
   return (
-    <div style={{ overflow: "hidden" }}>
-      <animated.div
-        className="flex flex-col gap-16"
-        style={{ ...scrollStyles, willChange: "transform" }}
+    <div className="overflow-y-hidden">
+      <motion.div
+        className="flex flex-col gap-16 items-center"
+        variants={containerVariants}
+        animate="animate"
       >
         {projects.map((project) => (
           <ProjectBox key={project.href} {...project} />
         ))}
-      </animated.div>
+      </motion.div>
     </div>
   );
 };
