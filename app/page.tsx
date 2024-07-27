@@ -25,7 +25,7 @@ export default function Home() {
         <div>
           <button
             onClick={handleView}
-            className="bg-gradient-to-l from-[#FF69B4] to-[#FF69B4]/60 hover:from-[#BA55D3] hover:to-[#BA55D3]/60 hover:scale-105 font-bold text-white p-2 rounded-md transition-all duration-300"
+            className="hidden md:inline-block bg-gradient-to-l from-[#FF69B4] to-[#FF69B4]/60 hover:from-[#BA55D3] hover:to-[#BA55D3]/60 hover:scale-105 font-bold text-white p-2 rounded-md transition-all duration-300"
           >
             {view ? "Hide Projects" : "View Projects"}
           </button>
