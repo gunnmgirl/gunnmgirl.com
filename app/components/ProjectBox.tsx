@@ -10,7 +10,7 @@ export const ProjectBox = (props: ProjectBoxProps) => {
   };
 
   return (
-    <div className="max-w-sm p-3 flex flex-col gap-1 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="hover:scale-110 transition-all duration-400 max-w-sm p-3 flex flex-col gap-1 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <Image src={projectImage} alt="Picture of the project" />
       <h1 className="font-extrabold">{title}</h1>
       <p className="text-sm">{description}</p>
