@@ -10,25 +10,19 @@ export const Projects = ({
   projects: ProjectBoxProps[];
   isOdd?: boolean;
 }) => {
-  const containerVariants = {
-    animate: {
-      y: isOdd ? ["-100%", "100%"] : ["100%", "-100%"],
-      transition: {
-        y: {
-          repeat: Infinity,
-          duration: 8,
-          ease: "linear",
-        },
-      },
-    },
-  };
-
   return (
     <div className="overflow-y-hidden hidden md:block">
       <motion.div
         className="flex flex-col gap-16 items-center"
-        variants={containerVariants}
-        animate="animate"
+        animate={{ y: isOdd ? ["-100%", "100%"] : ["100%", "-100%"] }}
+        transition={{
+          y: {
+            repeat: Infinity,
+            duration: 8,
+            ease: "linear",
+            repeatType: "mirror",
+          },
+        }}
       >
         {projects.map((project) => (
           <ProjectBox key={project.href} {...project} />
