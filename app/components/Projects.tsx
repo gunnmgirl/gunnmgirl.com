@@ -18,7 +18,7 @@ export const Projects = ({
         transition={{
           y: {
             repeat: Infinity,
-            duration: 8,
+            duration: 12,
             ease: "linear",
             repeatType: "mirror",
           },
