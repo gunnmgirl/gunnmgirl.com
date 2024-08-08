@@ -32,7 +32,8 @@ export const Projects = ({
     controls.stop();
   };
 
-  const handleHoverEnd = () => {
+  const handleHoverEnd = (props: any) => {
+    console.log("props-", props);
     controls.start({
       y: isOdd ? ["-100%", "100%"] : ["100%", "-100%"],
       transition: {
