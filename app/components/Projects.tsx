@@ -12,7 +12,8 @@ export const Projects = ({
   isOdd?: boolean;
 }) => {
   const controls = useAnimation();
-  const [positionY, setPositionY] = useState(0);
+  const [time, setTime] = useState(0);
+  const [startTime, setStartTime] = useState(Date.now());
 
   useEffect(() => {
     controls.start({
@@ -29,8 +30,8 @@ export const Projects = ({
   }, [isOdd, controls]);
 
   const handleHoverStart = (event: MouseEvent, info: EventInfo) => {
-    setPositionY(info.point.y);
     controls.stop();
+    setTime(Date.now());
   };
 
   const handleHoverEnd = (event: MouseEvent, info: EventInfo) => {
@@ -42,10 +43,11 @@ export const Projects = ({
           duration: projects.length * 3,
           ease: "linear",
           repeatType: "loop",
-          from: positionY,
+          delay: -(time - startTime) / 1000,
         },
       },
     });
+    setStartTime(Date.now());
   };
 
   return (
