@@ -13,25 +13,28 @@ export const Projects = ({
 }) => {
   const controls = useAnimation();
   const [time, setTime] = useState(0);
-  const [startTime, setStartTime] = useState(Date.now());
+  const [startTime, setStartTime] = useState(0);
+  const [afterHoverStartTime, setAfterHoverStartTime] = useState(0);
 
   useEffect(() => {
-    controls.start({
-      y: isOdd ? ["-100%", "100%"] : ["100%", "-100%"],
-      transition: {
-        y: {
-          repeat: Infinity,
-          duration: projects.length * 3,
-          ease: "linear",
-          repeatType: "loop",
+    if (!startTime) {
+      controls.start({
+        y: isOdd ? ["-100%", "100%"] : ["100%", "-100%"],
+        transition: {
+          y: {
+            repeat: Infinity,
+            duration: projects.length * 3,
+            ease: "linear",
+          },
         },
-      },
-    });
+      });
+      setStartTime(Date.now());
+    }
   }, [isOdd, controls]);
 
   const handleHoverStart = (event: MouseEvent, info: EventInfo) => {
-    controls.stop();
     setTime(Date.now());
+    controls.stop();
   };
 
   const handleHoverEnd = (event: MouseEvent, info: EventInfo) => {
@@ -42,26 +45,33 @@ export const Projects = ({
           repeat: Infinity,
           duration: projects.length * 3,
           ease: "linear",
-          repeatType: "loop",
-          delay: -(time - startTime) / 1000,
+          delay: ((afterHoverStartTime - time) % startTime) / 1000,
         },
       },
     });
-    setStartTime(Date.now());
+    setAfterHoverStartTime(Date.now());
   };
+
+  console.log("time-", time);
+  console.log("startTime-", startTime);
+  console.log("afterHoverStartTime-", afterHoverStartTime);
+
+  console.log("diff", ((afterHoverStartTime - time) % startTime) / 1000);
 
   return (
     <div className="overflow-y-hidden hidden md:block">
       <motion.div
         className="flex flex-col gap-16 items-center"
         animate={controls}
-        onHoverStart={handleHoverStart}
-        onHoverEnd={handleHoverEnd}
       >
         {projects.map((project) => (
-          <div key={project.href}>
+          <motion.div
+            onHoverStart={handleHoverStart}
+            onHoverEnd={handleHoverEnd}
+            key={project.href}
+          >
             <ProjectBox {...project} />
-          </div>
+          </motion.div>
         ))}
       </motion.div>
     </div>
