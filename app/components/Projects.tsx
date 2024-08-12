@@ -56,8 +56,6 @@ export const Projects = ({
   console.log("startTime-", startTime);
   console.log("afterHoverStartTime-", afterHoverStartTime);
 
-  console.log("diff", ((afterHoverStartTime - time) % startTime) / 1000);
-
   return (
     <div className="overflow-y-hidden hidden md:block">
       <motion.div
