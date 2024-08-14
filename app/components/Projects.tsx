@@ -32,12 +32,12 @@ export const Projects = ({
     }
   }, [isOdd, controls]);
 
-  const handleHoverStart = (event: MouseEvent, info: EventInfo) => {
+  const handleHoverStart = () => {
     setTime(Date.now());
     controls.stop();
   };
 
-  const handleHoverEnd = (event: MouseEvent, info: EventInfo) => {
+  const handleHoverEnd = () => {
     controls.start({
       y: isOdd ? ["-100%", "100%"] : ["100%", "-100%"],
       transition: {
