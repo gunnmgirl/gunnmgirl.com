@@ -21,7 +21,7 @@ export default function Home() {
         <div className="flex flex-col items-center gap-6 sm:px-[8%] lg:px-[20%]">
           <Image
             src={profilePic}
-            className="hidden medium:block medium:h-[100px] medium:w-[100px] tall:w-[320px] tall:h-[320px] rounded-full ring-2 hover:ring-4 ring-[#FFB6C1] transition-all duration-400"
+            className="hidden medium:block medium:h-[120px] medium:w-[120px] tall:w-[320px] tall:h-[320px] rounded-full ring-2 hover:ring-4 ring-[#FFB6C1] transition-all duration-400"
             alt="Picture of the author"
           />
           <div className="text-sm tall:text-base w-full flex flex-col gap-2 items-center justify-center text-center">
@@ -42,7 +42,7 @@ export default function Home() {
               , a passionate full-stack developer with a specialization in
               startup environments.
             </p>
-            <p>
+            <p className="medium:hidden tall:block">
               I thrive on continuous learning and love diving into cutting-edge
               technologies.
             </p>
