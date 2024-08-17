@@ -14,7 +14,8 @@ export const Projects = ({
   const controls = useAnimation();
   const [time, setTime] = useState(0);
   const [startTime, setStartTime] = useState(0);
-  const [afterHoverStartTime, setAfterHoverStartTime] = useState(0);
+  const [isHoverOver, setIsHoverOver] = useState(false);
+  const [endTime, setEndTime] = useState(0);
 
   useEffect(() => {
     if (!startTime) {
@@ -33,11 +34,16 @@ export const Projects = ({
   }, [isOdd, controls]);
 
   const handleHoverStart = () => {
-    setTime(Date.now());
     controls.stop();
+    setTime(Date.now());
+    setIsHoverOver(false);
   };
 
   const handleHoverEnd = () => {
+    // always negative to speed up the animation
+    const delay =
+      Math.abs(((startTime - time) / 1000) % (projects.length * 3)) * -1;
+
     controls.start({
       y: isOdd ? ["-100%", "100%"] : ["100%", "-100%"],
       transition: {
@@ -45,16 +51,19 @@ export const Projects = ({
           repeat: Infinity,
           duration: projects.length * 3,
           ease: "linear",
-          delay: ((afterHoverStartTime - time) % startTime) / 1000,
+          delay: delay,
         },
       },
     });
-    setAfterHoverStartTime(Date.now());
+    setEndTime(Date.now());
+    setIsHoverOver(true);
   };
 
-  console.log("time-", time);
-  console.log("startTime-", startTime);
-  console.log("afterHoverStartTime-", afterHoverStartTime);
+  useEffect(() => {
+    if (isHoverOver) {
+      setStartTime(startTime + (endTime - time));
+    }
+  }, [isHoverOver]);
 
   return (
     <div className="overflow-y-hidden hidden md:block">
