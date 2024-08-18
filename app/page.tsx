@@ -38,7 +38,7 @@ export default function Home() {
             className="hidden tall:block rounded-full ring-2 hover:ring-4 ring-[#FFB6C1] transition-all duration-400"
             alt="Picture of the author"
           />
-          <div className="w-full flex flex-col gap-2 items-center justify-center text-center">
+          <div className="text-sm tall:text-base w-full flex flex-col gap-2 items-center justify-center text-center">
             <p>
               Hi there
               <span className="ml-1 inline-block hover:rotate-[30deg] cursor-pointer transition-transform duration-300">
