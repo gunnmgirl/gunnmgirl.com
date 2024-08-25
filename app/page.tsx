@@ -21,9 +21,7 @@ export default function Home() {
         <div className="flex flex-col items-center gap-6 sm:px-[8%] md:px-[15%] lg:px-[20%]">
           <Image
             src={profilePic}
-            width={320}
-            height={320}
-            className="hidden tall:block rounded-full ring-2 hover:ring-4 ring-[#FFB6C1] transition-all duration-400"
+            className="hidden medium:block medium:h-[100px] medium:w-[100px] tall:w-[320px] tall:h-[320px] rounded-full ring-2 hover:ring-4 ring-[#FFB6C1] transition-all duration-400"
             alt="Picture of the author"
           />
           <div className="text-sm tall:text-base w-full flex flex-col gap-2 items-center justify-center text-center">

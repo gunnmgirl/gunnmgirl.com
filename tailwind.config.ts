@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        tall: { raw: "(min-height: 920px)" },
         medium: { raw: "(min-height: 650px)" },
+        tall: { raw: "(min-height: 920px)" },
       },
     },
   },
