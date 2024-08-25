@@ -77,7 +77,7 @@ export const Projects = ({
         className="flex flow-row gap-4 md:flex-col md:gap-16 items-center
         md:[--y-odd-from:-100%] md:[--y-from:100%] md:[--y-odd-to:100%] md:[--y-to:-100%] 
         md:[--x-odd-from:0%] md:[--x-from:0%] md:[--x-odd-to:0%] md:[--x-to:0%]
-        [--x-odd-from:-100%] [--x-from:100%] [--x-odd-to:100%] [--x-to:-100%] 
+        [--x-odd-from:100%] [--x-from:-100%] [--x-odd-to:-100%] [--x-to:100%] 
         [--y-odd-from:0%] [--y-from:0%] [--y-odd-to:0%] [--y-to:0%]"
         animate={controls}
       >

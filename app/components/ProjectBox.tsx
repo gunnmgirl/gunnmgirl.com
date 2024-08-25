@@ -13,7 +13,7 @@ export const ProjectBox = (props: ProjectBoxProps) => {
     <div className="m-3 p-3 transition-all duration-400 hover:scale-110">
       <div className="max-w-sm flex flex-col gap-1 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-3">
         <Image
-          className="hidden medium:block"
+          className="hidden h-[54px] medium:block md:h-auto"
           src={projectImage}
           alt="Picture of the project"
         />
