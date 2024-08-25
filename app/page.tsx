@@ -13,11 +13,11 @@ export default function Home() {
   const projectsGridTwo = projects.slice(4, projects.length);
 
   return (
-    <div className="grid grid-rows-[1fr_1fr_1fr] md:grid-cols-[1fr_2fr_1fr] gap-2 h-screen overflow-hidden">
-      <div className="hidden md:block">
+    <div className="grid grid-rows-[1fr_1fr_1fr] md:grid-cols-[1fr_2fr_1fr] gap-2 h-screen min-h-[500px]">
+      <div className="overflow-hidden">
         <Projects projects={projectsGridOne} />
       </div>
-      <div className="h-screen flex flex-col items-center justify-evenly p-4 md:p-0 transition-all duration-7000">
+      <div className="md:h-screen flex flex-col items-center justify-evenly p-4 md:p-0 transition-all duration-7000">
         <div className="flex flex-col items-center gap-6 sm:px-[8%] md:px-[15%] lg:px-[20%]">
           <Image
             src={profilePic}
@@ -50,7 +50,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="flex gap-2 justify-center">
+        <div className="flex gap-2 justify-center mt-6 md:mt-0">
           <SocialMediaBox
             icon={<Linkedin />}
             href="https://www.linkedin.com/in/gunnmgirl/"
@@ -62,7 +62,7 @@ export default function Home() {
           <SocialMediaBox icon={<Twitter />} href="https://x.com/gunnmgirl98" />
         </div>
       </div>
-      <div className="hidden md:block">
+      <div className="overflow-hidden">
         <Projects projects={projectsGridTwo} isOdd />
       </div>
     </div>

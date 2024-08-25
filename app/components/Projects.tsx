@@ -1,5 +1,5 @@
 "use client";
-import { EventInfo, motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ProjectBox } from "./ProjectBox";
 import { ProjectBoxProps } from "../types";
@@ -20,13 +20,16 @@ export const Projects = ({
   useEffect(() => {
     if (!startTime) {
       controls.start({
-        y: isOdd ? ["-100%", "100%"] : ["100%", "-100%"],
+        y: isOdd
+          ? ["var(--y-odd-from)", "var(--y-odd-to)"]
+          : ["var(--y-from)", "var(--y-to)"],
+        x: isOdd
+          ? ["var(--x-odd-from)", "var(--x-odd-to)"]
+          : ["var(--x-from)", "var(--x-to)"],
         transition: {
-          y: {
-            repeat: Infinity,
-            duration: projects.length * 3,
-            ease: "linear",
-          },
+          repeat: Infinity,
+          duration: projects.length * 3,
+          ease: "linear",
         },
       });
       setStartTime(Date.now());
@@ -45,14 +48,17 @@ export const Projects = ({
       Math.abs(((startTime - time) / 1000) % (projects.length * 3)) * -1;
 
     controls.start({
-      y: isOdd ? ["-100%", "100%"] : ["100%", "-100%"],
+      y: isOdd
+        ? ["var(--y-odd-from)", "var(--y-odd-to)"]
+        : ["var(--y-from)", "var(--y-to)"],
+      x: isOdd
+        ? ["var(--x-odd-from)", "var(--x-odd-to)"]
+        : ["var(--x-from)", "var(--x-to)"],
       transition: {
-        y: {
-          repeat: Infinity,
-          duration: projects.length * 3,
-          ease: "linear",
-          delay: delay,
-        },
+        repeat: Infinity,
+        duration: projects.length * 3,
+        ease: "linear",
+        delay: delay,
       },
     });
     setEndTime(Date.now());
@@ -66,9 +72,13 @@ export const Projects = ({
   }, [isHoverOver]);
 
   return (
-    <div className="overflow-y-hidden">
+    <div className="overflow-hidden">
       <motion.div
-        className="flex flex-col gap-16 items-center"
+        className="flex flow-row gap-4 md:flex-col md:gap-16 items-center
+        md:[--y-odd-from:-100%] md:[--y-from:100%] md:[--y-odd-to:100%] md:[--y-to:-100%] 
+        md:[--x-odd-from:0%] md:[--x-from:0%] md:[--x-odd-to:0%] md:[--x-to:0%]
+        [--x-odd-from:-100%] [--x-from:100%] [--x-odd-to:100%] [--x-to:-100%] 
+        [--y-odd-from:0%] [--y-from:0%] [--y-odd-to:0%] [--y-to:0%]"
         animate={controls}
       >
         {projects.map((project) => (
