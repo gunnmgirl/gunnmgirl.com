@@ -13,12 +13,12 @@ export default function Home() {
   const projectsGridTwo = projects.slice(4, projects.length);
 
   return (
-    <div className="grid grid-rows-[1fr_1fr_1fr] md:grid-cols-[1fr_2fr_1fr] gap-2 h-screen min-h-[500px]">
+    <div className="grid grid-rows-[auto_1fr_auto] md:grid-cols-[1fr_2fr_1fr] gap-2 h-screen min-h-[500px]">
       <div className="overflow-hidden">
         <Projects projects={projectsGridOne} />
       </div>
       <div className="md:h-screen flex flex-col items-center justify-evenly p-4 md:p-0 transition-all duration-7000">
-        <div className="flex flex-col items-center gap-6 sm:px-[8%] md:px-[15%] lg:px-[20%]">
+        <div className="flex flex-col items-center gap-6 sm:px-[8%] lg:px-[20%]">
           <Image
             src={profilePic}
             className="hidden medium:block medium:h-[100px] medium:w-[100px] tall:w-[320px] tall:h-[320px] rounded-full ring-2 hover:ring-4 ring-[#FFB6C1] transition-all duration-400"
