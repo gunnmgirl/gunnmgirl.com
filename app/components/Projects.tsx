@@ -66,7 +66,7 @@ export const Projects = ({
   }, [isHoverOver]);
 
   return (
-    <div className="overflow-y-hidden hidden md:block">
+    <div className="overflow-y-hidden">
       <motion.div
         className="flex flex-col gap-16 items-center"
         animate={controls}

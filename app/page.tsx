@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <div className="grid grid-rows-[1fr_1fr_1fr] md:grid-cols-[1fr_2fr_1fr] gap-2 h-screen overflow-hidden">
-      <div>
+      <div className="hidden md:block">
         <Projects projects={projectsGridOne} />
       </div>
       <div className="h-screen flex flex-col items-center justify-evenly p-4 md:p-0 transition-all duration-7000">
@@ -62,7 +62,7 @@ export default function Home() {
           <SocialMediaBox icon={<Twitter />} href="https://x.com/gunnmgirl98" />
         </div>
       </div>
-      <div>
+      <div className="hidden md:block">
         <Projects projects={projectsGridTwo} isOdd />
       </div>
     </div>
