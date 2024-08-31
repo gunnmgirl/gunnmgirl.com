@@ -21,11 +21,11 @@ export const Projects = ({
     if (!startTime) {
       controls.start({
         y: isOdd
-          ? ["var(--y-odd-from)", "var(--y-odd-to)"]
-          : ["var(--y-from)", "var(--y-to)"],
+          ? ["var(--y-odd-from,0%)", "var(--y-odd-to,0%)"]
+          : ["var(--y-from,0%)", "var(--y-to,0%)"],
         x: isOdd
-          ? ["var(--x-odd-from)", "var(--x-odd-to)"]
-          : ["var(--x-from)", "var(--x-to)"],
+          ? ["var(--x-odd-from,0%)", "var(--x-odd-to,0%)"]
+          : ["var(--x-from,0%)", "var(--x-to,0%)"],
         transition: {
           repeat: Infinity,
           duration: projects.length * 3,
@@ -49,11 +49,11 @@ export const Projects = ({
 
     controls.start({
       y: isOdd
-        ? ["var(--y-odd-from)", "var(--y-odd-to)"]
-        : ["var(--y-from)", "var(--y-to)"],
+        ? ["var(--y-odd-from,0%)", "var(--y-odd-to,0%)"]
+        : ["var(--y-from,0%)", "var(--y-to,0%)"],
       x: isOdd
-        ? ["var(--x-odd-from)", "var(--x-odd-to)"]
-        : ["var(--x-from)", "var(--x-to)"],
+        ? ["var(--x-odd-from,0%)", "var(--x-odd-to,0%)"]
+        : ["var(--x-from,0%)", "var(--x-to,0%)"],
       transition: {
         repeat: Infinity,
         duration: projects.length * 3,
